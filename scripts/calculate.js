@@ -1,3 +1,4 @@
+
 // Rectangle function
 function calculateRectangleArea() {
     // get length of the rectangle
@@ -11,8 +12,7 @@ function calculateRectangleArea() {
 
     // display rectangle area
     setDisplayValue("display_rectangle_area", rectangleArea);
-    // const displayRectangleArea = document.getElementById("display_rectangle_area");
-    // displayRectangleArea.innerText = rectangleArea;
+
 };
 
 // Traingle function
@@ -48,6 +48,24 @@ function calculateParallelogramArea() {
 
 };
 
+// Pentagon function
+function calculatePentagonArea() {
+
+    // get pentagon perimeter
+    const perimeter = getInputValue("pentagon_perimeter");
+
+    // get pentagon apothem
+    const apothem = getInputValue("pentagon_apothem");
+
+    // calculate pentagon area
+    const pentagonArea = 0.5 * perimeter * apothem;
+
+    // Diaplay pentagon area
+    setDisplayValue("dispiay_pentagon_area", pentagonArea);
+
+}
+
+// Input function
 function getInputValue(inputFieldId) {
 
     const inputField = document.getElementById(inputFieldId);
@@ -57,7 +75,10 @@ function getInputValue(inputFieldId) {
 
 };
 
+// Display function
 function setDisplayValue(displayId, value) {
-    const displayValue = document.getElementById(displayId);
-    displayValue.innerText = value;
+
+    const displayField = document.getElementById(displayId);
+    displayField.innerText = value;
+
 };
