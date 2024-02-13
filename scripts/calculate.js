@@ -68,7 +68,19 @@ function calculateParallelogramArea() {
 };
 
 // Rhombus function
-function calculateRhombusArea(){
+function calculateRhombusArea() {
+
+    // get rhombus diagonals 1
+    const diagonals1 = getInputValue("rhombus_diagonals_1");
+
+    // get rhombus diagonals 2
+    const diagonals2 = getInputValue("rhombus_diagonals_2");
+
+    // calculate rhombus area
+    const rhombusArea = 0.5 * diagonals1 * diagonals2;
+
+    // Diaplay rhombus area
+    setDisplayValue("dispiay_rhombus_area", rhombusArea);
 
 };
 
