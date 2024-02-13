@@ -1,4 +1,23 @@
 
+// Input function
+function getInputValue(inputFieldId) {
+
+    const inputField = document.getElementById(inputFieldId);
+    const inputValueText = inputField.value;
+    const inputValue = parseFloat(inputValueText);
+    return inputValue;
+
+};
+
+// Display function
+function setDisplayValue(displayId, value) {
+
+    const displayField = document.getElementById(displayId);
+    displayField.innerText = value;
+
+};
+
+
 // Rectangle function
 function calculateRectangleArea() {
     // get length of the rectangle
@@ -48,6 +67,11 @@ function calculateParallelogramArea() {
 
 };
 
+// Rhombus function
+function calculateRhombusArea(){
+
+};
+
 // Pentagon function
 function calculatePentagonArea() {
 
@@ -63,22 +87,21 @@ function calculatePentagonArea() {
     // Diaplay pentagon area
     setDisplayValue("dispiay_pentagon_area", pentagonArea);
 
-}
-
-// Input function
-function getInputValue(inputFieldId) {
-
-    const inputField = document.getElementById(inputFieldId);
-    const inputValueText = inputField.value;
-    const inputValue = parseFloat(inputValueText);
-    return inputValue;
-
 };
 
-// Display function
-function setDisplayValue(displayId, value) {
+// Ellipse function
+function calculateEllipseArea() {
 
-    const displayField = document.getElementById(displayId);
-    displayField.innerText = value;
+    // get ellipse major radius
+    const majorRadius = getInputValue("ellipse_major_radius");
+
+    // get ellipse minor radius
+    const minorRadius = getInputValue("ellipse_minor_radius");
+
+    // calculate ellipse area
+    const ellipseArea = 3.14 * majorRadius * minorRadius;
+
+    // Diaplay ellipse area
+    setDisplayValue("dispiay_ellipse_area", ellipseArea);
 
 };

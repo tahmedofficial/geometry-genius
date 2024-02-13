@@ -102,10 +102,23 @@
                     <figure><img src="images/rhombus.png" alt="Shoes" />
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">Rhombus</h2>
-                        <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
-                        <div class="card-actions justify-end">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <h2 class="card-title">Triangle</h2>
+                        <p class="text-center text-2xl">Area (A) = 0.5 x p x b</p>
+                        <div class="flex">
+                            <input id="pentagon_perimeter" class="w-24 text-2xl rounded-sm bg-gray-200 outline-none"
+                                type="text" placeholder="perim">
+                            <p>cm</p>
+                            <input id="pentagon_apothem" class="w-24 text-2xl rounded-sm bg-gray-200 outline-none"
+                                type="text" placeholder="apo">
+                            <p>cm</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="dispiay_pentagon_area">0</span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="calculateRhombusArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
@@ -131,6 +144,31 @@
                         </div>
                         <div class="card-actions">
                             <button onclick="calculatePentagonArea()" class="btn btn-primary w-full">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ellipse card -->
+                <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure><img src="images/ellipse.png" alt="Shoes" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Ellipse</h2>
+                        <p class="text-center text-2xl">Area (A) = π x a x b</p>
+                        <div class="flex">
+                            <input id="ellipse_major_radius" class="w-24 text-2xl rounded-sm bg-gray-200 outline-none"
+                                type="text" placeholder="major">
+                            <p>cm</p>
+                            <input id="ellipse_minor_radius" class="w-24 text-2xl rounded-sm bg-gray-200 outline-none"
+                                type="text" placeholder="minor">
+                            <p>cm</p>
+                        </div>
+                        <div>
+                            <p class="text-2xl">Area: <span id="dispiay_ellipse_area">0</span>
+                                <span>cm<sup>2</sup></span>
+                            </p>
+                        </div>
+                        <div class="card-actions">
+                            <button onclick="calculateEllipseArea()" class="btn btn-primary w-full">Calculate</button>
                         </div>
                     </div>
                 </div>
